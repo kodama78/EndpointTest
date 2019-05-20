@@ -14,4 +14,4 @@
         
 #### Thoughts
 - Create a single function that contains a list of inputs and performs the actions for each one
-          
+         https://codepen.io/anon/pen/ZNJKQo?editors=1011 

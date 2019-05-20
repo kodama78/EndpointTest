@@ -2,8 +2,8 @@ function Test() {
 	this.data = {};
 }
 
-Test.prototype.create = function() {
-	const items = arguments;
+Test.prototype.create = function(string) {
+	const items = string.split('/');
 	const data = {};
 	Array.prototype.reduce.call(items, function (object, key) {
 		if (!object[key]) {
@@ -24,8 +24,20 @@ Test.prototype.move = function(location, destination) {
 	this.delete(workingDirectory.reduct )
 }
 
-Test.prototype.delete = function(string) {
-	const items = string.split('/')
+Test.prototype.delete = function(path) {
+	const _obj = JSON.parse(JSON.stringify(obj));
+	const keys = path.split('/');
+
+	keys.reduce((acc, key, index) => {
+		console.log(acc);
+		if (index === keys.length - 1) {
+			delete acc[key];
+			return true;
+		}
+		return acc[key];
+	}, _obj);
+
+	return _obj;
 }
 
 
